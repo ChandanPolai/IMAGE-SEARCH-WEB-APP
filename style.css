@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppiens",sans-serif;
+}
+
+:root{
+    --main-body:#810CA8;
+    --container-colors:#C147E9;
+    --text-color:#fff;
+}
+
+html,body{
+    width: 100%;
+    background: var(--main-body);
+}
+
+.container{
+    width: 100%;
+    border: 2px solid #fff;
+    margin:4rem 0;
+}
+
+.container h2{
+    text-align: center;
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+
+.container form{
+    text-align: center;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+/* Base styling */
+form .search_field {
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 0 0.5rem;
+    font-size: 1.3rem;
+    border-radius: 0.2rem;
+}
+
+form .search-btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    background: var(--container-colors);
+    padding: 0.2rem 1.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    margin: 0 0.2em;
+    border-radius: 0.2rem;
+}
+
+form .search-btn:hover{
+    background:var(--text-color);
+    color: var(--main-body);
+}
+
+/* 🚀🚀🚀this is my img container section fetch data styling */
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+section main{
+    position: relative;
+
+}
+
+/* Style for the main section */
+section main img {
+    height: 400px;
+    width: 400px;
+    transition: all 0.3s ease;
+}
+
+/* Style for the overlay within the image */
+section main .overlay {
+    position: absolute; 
+    left: 0;
+    bottom:0;
+    background: #3e3a3a93;
+    width: 400px;
+    height:0%;
+    transition: all 0.3s ease; 
+}
+
+
+/* Apply styles when hovering over the image */
+ main:hover .overlay{
+    height: 100%;
+}
+
+.overlay h3{
+    color: white;
+    display: none;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 1em 0;
+    padding: 0.5em;
+    border-radius: 1em;
+    border: 2px solid var(--main-body);
+}
+
+main .download_icon{
+    font-size: 2rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    background: var(--main-body);
+    color: var(--text-color);
+    display: none;
+    transition: all 0.3s ease; 
+
+}
+main:hover h3{
+    display: block;
+}
+
+.download_icon:hover{
+    color: var(--main-body);
+    background: var(--text-color);
+}
+main:hover .download_icon{
+    display: block;
+}
+
+
+/* 📢📢the load more btn styling */
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+}
+.button1{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    background: var(--container-colors);
+    padding: 0.2rem 1.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    margin: 0 0.2em;
+    border-radius: 0.2rem;
+    display: none;
+}
+
+.button1:hover{
+    background:var(--text-color);
+    color: var(--main-body);
+}
+
+/* Responsive styling */
+@media only screen and (max-width: 768px) {
+    form .search_field,
+    form .search-btn {
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    form .search-btn {
+        padding: 0.5rem 1rem; /* Further adjust padding for smaller screens */
+        font-size: 0.9rem; /* Further adjust font size for smaller screens */
+    }
+}
